@@ -1,43 +1,24 @@
 # ElasticDash Documentation
 
-Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logger (modified Langfuse) for capturing and storing LLM application traces.
+Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logger for capturing and storing LLM application traces.
 
 ---
 
 ## 📚 Documentation Index
 
-### Getting Started
+### Documentation
 
-1. **[Architecture Overview](./docs/architecture.md)**
-   - System design and component responsibilities
-   - Data flow between Frontend, Backend, and Logger
-   - Direct ClickHouse database access patterns
-   - Multi-tenancy and security considerations
-   - Deployment architecture
+- [Architecture Overview](./docs/architecture.md): System design, data flow, deployment, and security
+- [SDK Overview](./docs/sdk-overview.md): Instrumentation, quick start, integrations, and configuration
+- [Data Model Reference](./docs/data-model.md): Traces, sessions, observations, and metadata
+- [Fetching Data Guide](./docs/fetching-data.md): REST API, use cases, and performance tips
+- [Self-Host Guide](./docs/self-host.md): Step-by-step instructions for self-hosting ElasticDash
 
-2. **[SDK Overview](./docs/sdk-overview.md)** ⭐ Start here for instrumentation
-    - Python SDK (`elasticdash` package)
-    - JavaScript/TypeScript SDK (`@elasticdash/*` packages)
-    - Quick start guides
-    - Installation and configuration
-    - Framework integrations (OpenAI, LangChain)
-    - **Note:** The SDK is only for tracing LLM behaviours. It is not intended for fetching traces or performing evaluation directly.
+### Quick Links
 
-### Core Concepts
-
-3. **[Data Model Reference](./docs/data-model.md)**
-   - Traces, Sessions, and Observations explained
-   - Attribute tables and examples
-   - Nested observation hierarchies
-   - Best practices for metadata and tags
-
-### Advanced Usage
-
-4. **[Fetching Data from Logger](./docs/fetching-data.md)**
-    - REST API authentication and endpoints
-    - Common use cases and pagination
-    - Performance tips
-    - **Note:** Once traces are fetched, they are evaluated and shown on your dashboard. Use the dashboard to check your existing traces, test cases, and test runs.
+- [SDK Quick Start](./docs/sdk-overview.md#quick-start)
+- [Architecture: Direct Database Access](./docs/architecture.md#evaluation-flow)
+- [Basic Usage Examples](./docs/sdk-overview.md#basic-usage)
 
 ---
 
@@ -248,12 +229,18 @@ For issues and questions related to ElasticDash documentation, please refer to:
 
 This documentation covers:
 
-✅ **ElasticDash Logger** (modified Langfuse)
+✅ **ElasticDash Logger**
 ✅ **Python SDK** (`elasticdash`)
 ✅ **JavaScript/TypeScript SDK** (`@elasticdash/*`)
 ✅ **Data model** (Traces, Sessions, Observations)
 ✅ **Architecture** (component communication, database access)
 ✅ **Querying data** (REST API and SDK methods)
+
+---
+
+## 🙏 Special Thanks
+
+ElasticDash is built on top of the excellent [Langfuse](https://langfuse.com/) project. Special thanks to the Langfuse team and community for their foundational work.
 
 ⏳ **Coming soon:**
 - ElasticDash Backend API reference

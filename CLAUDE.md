@@ -29,6 +29,7 @@ Treat `.temp/` as your primary reference corpus. If something is missing, explic
 ## Non-Negotiable Workflow
 
 ### 1) Always write a plan first
+
 **Before doing anything else**, you MUST create a plan file:
 
 - Path: `.temp/plan.md`
@@ -36,12 +37,14 @@ Treat `.temp/` as your primary reference corpus. If something is missing, explic
 This plan must be written even if the task seems small.
 
 ### 2) Get approval before executing
+
 After writing `.temp/plan.md`, you must **stop** and ask for approval.
 
 - Do not proceed until the user explicitly approves the plan.
 - If the user requests changes, revise `.temp/plan.md` and ask again.
 
 ### 3) Execute step-by-step after approval
+
 Once approved:
 
 - Follow the plan **step by step**
