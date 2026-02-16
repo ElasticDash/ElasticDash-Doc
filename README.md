@@ -20,6 +20,14 @@ Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logg
 - [Architecture: Direct Database Access](./docs/architecture.md#evaluation-flow)
 - [Basic Usage Examples](./docs/sdk-overview.md#basic-usage)
 
+### Links to repositories
+
+- [ElasticDash Logger](https://github.com/ElasticDash/ElasticDash-Logger)
+- [ElasticDash Backend](https://github.com/ElasticDash/ElasticDash-BE)
+- [ElasticDash Dashboard](https://github.com/ElasticDash/ElasticDash-Dashboard)
+- [ElasticDash JS SDK](https://github.com/ElasticDash/ElasticDash-JS)
+- [ElasticDash Python SDK](https://github.com/ElasticDash/Elasticdash-Python)
+
 ---
 
 ## 🚀 Quick Links
