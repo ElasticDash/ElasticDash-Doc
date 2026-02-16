@@ -8,23 +8,24 @@ Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logg
 
 ### Getting Started
 
-1. **[Architecture Overview](./architecture.md)**
+1. **[Architecture Overview](./docs/architecture.md)**
    - System design and component responsibilities
    - Data flow between Frontend, Backend, and Logger
    - Direct ClickHouse database access patterns
    - Multi-tenancy and security considerations
    - Deployment architecture
 
-2. **[SDK Overview](./sdk-overview.md)** ⭐ Start here for instrumentation
-   - Python SDK (`elasticdash` package)
-   - JavaScript/TypeScript SDK (`@elasticdash/*` packages)
-   - Quick start guides
-   - Installation and configuration
-   - Framework integrations (OpenAI, LangChain)
+2. **[SDK Overview](./docs/sdk-overview.md)** ⭐ Start here for instrumentation
+    - Python SDK (`elasticdash` package)
+    - JavaScript/TypeScript SDK (`@elasticdash/*` packages)
+    - Quick start guides
+    - Installation and configuration
+    - Framework integrations (OpenAI, LangChain)
+    - **Note:** The SDK is only for tracing LLM behaviours. It is not intended for fetching traces or performing evaluation directly.
 
 ### Core Concepts
 
-3. **[Data Model Reference](./data-model.md)**
+3. **[Data Model Reference](./docs/data-model.md)**
    - Traces, Sessions, and Observations explained
    - Attribute tables and examples
    - Nested observation hierarchies
@@ -32,12 +33,11 @@ Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logg
 
 ### Advanced Usage
 
-4. **[Fetching Data from Logger](./fetching-data.md)**
-   - REST API authentication and endpoints
-   - Python SDK query methods
-   - JavaScript/TypeScript SDK query methods
-   - Common use cases and pagination
-   - Performance tips
+4. **[Fetching Data from Logger](./docs/fetching-data.md)**
+    - REST API authentication and endpoints
+    - Common use cases and pagination
+    - Performance tips
+    - **Note:** Once traces are fetched, they are evaluated and shown on your dashboard. Use the dashboard to check your existing traces, test cases, and test runs.
 
 ---
 
@@ -47,19 +47,19 @@ Welcome to the ElasticDash documentation! This guide covers the ElasticDash Logg
 
 Start here to instrument your LLM application:
 
-→ **[SDK Quick Start](./sdk-overview.md#quick-start)**
+→ **[SDK Quick Start](./docs/sdk-overview.md#quick-start)**
 
 ### For Backend Developers
 
 Learn how ElasticDash Backend accesses trace data:
 
-→ **[Architecture: Direct Database Access](./architecture.md#evaluation-flow)**
+→ **[Architecture: Direct Database Access](./docs/architecture.md#evaluation-flow)**
 
 ### For Data Engineers
 
 Query traces programmatically for analysis:
 
-→ **[Fetching Data Guide](./fetching-data.md)**
+→ **[Fetching Data Guide](./docs/fetching-data.md)**
 
 ---
 
@@ -107,7 +107,7 @@ pip install elasticdash
 npm install @elasticdash/tracing @elasticdash/otel @opentelemetry/sdk-node
 ```
 
-See the **[SDK Overview](./sdk-overview.md)** for complete setup instructions.
+See the **[SDK Overview](./docs/sdk-overview.md)** for complete setup instructions.
 
 ---
 
@@ -148,7 +148,7 @@ await startActiveObservation("gpt-4-call", async (span) => {
 });
 ```
 
-See **[SDK Quick Start](./sdk-overview.md#quick-start)** for complete examples.
+See **[SDK Quick Start](./docs/sdk-overview.md#quick-start)** for complete examples.
 
 ---
 
@@ -182,7 +182,7 @@ ElasticDash Backend queries ClickHouse directly instead of using the Logger's HT
 - 🔧 **More flexibility** - Custom queries and joins
 - 📊 **Advanced analytics** - Complex aggregations and filtering
 
-See **[Architecture Overview](./architecture.md)** for full details.
+See **[Architecture Overview](./docs/architecture.md)** for full details.
 
 ---
 
@@ -221,7 +221,7 @@ observations = elasticdash.api.observations_v_2.get_many(
 )
 ```
 
-See **[SDK Overview](./sdk-overview.md#basic-usage)** for more examples.
+See **[SDK Overview](./docs/sdk-overview.md#basic-usage)** for more examples.
 
 ---
 
@@ -237,10 +237,10 @@ See **[SDK Overview](./sdk-overview.md#basic-usage)** for more examples.
 
 For issues and questions related to ElasticDash documentation, please refer to:
 
-- Architecture questions → **[Architecture Overview](./architecture.md)**
-- SDK usage questions → **[SDK Overview](./sdk-overview.md)**
-- Data model questions → **[Data Model Reference](./data-model.md)**
-- API questions → **[Fetching Data Guide](./fetching-data.md)**
+- Architecture questions → **[Architecture Overview](./docs/architecture.md)**
+- SDK usage questions → **[SDK Overview](./docs/sdk-overview.md)**
+- Data model questions → **[Data Model Reference](./docs/data-model.md)**
+- API questions → **[Fetching Data Guide](./docs/fetching-data.md)**
 
 ---
 

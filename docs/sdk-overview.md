@@ -5,7 +5,7 @@ ElasticDash provides fully-typed SDKs for instrumenting your LLM applications an
 - **Python** - `elasticdash` package on PyPI
 - **JavaScript/TypeScript** - Modular packages under `@elasticdash/*` on npm
 
-The ElasticDash SDKs are the recommended way to create traces and observations in your LLM applications for testing and evaluation.
+The ElasticDash SDKs are the recommended way to create traces and observations in your LLM applications for tracing LLM behaviours. **We do not recommend using the SDK to fetch traces or perform evaluation directly.**
 
 ---
 
@@ -27,6 +27,8 @@ The ElasticDash SDKs enable you to:
 - Type-safe APIs with IntelliSense support
 - Automatic error handling (SDK errors won't break your app)
 - Compatible with popular frameworks (OpenAI, LangChain, etc.)
+
+**Note:** The SDK is not intended for fetching traces or performing evaluation. Once traces are sent, they will be evaluated and shown on your dashboard. Use the dashboard to check your traces, test cases, and test runs.
 
 ---
 

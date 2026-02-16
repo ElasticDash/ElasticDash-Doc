@@ -1,6 +1,6 @@
 # Fetching Data from ElasticDash Logger
 
-This guide explains how to retrieve traces, sessions, and observations from the ElasticDash Logger using the REST API and SDKs.
+This guide explains how to retrieve traces, sessions, and observations from the ElasticDash Logger using the REST API. **We do not recommend using the SDK to fetch traces or perform evaluation directly.**
 
 > **Note for ElasticDash Backend Developers**: ElasticDash Backend does **not** use these APIs. Instead, it queries the Logger's ClickHouse database directly via SQL for better performance. This guide is intended for:
 > - External applications integrating with ElasticDash Logger
@@ -16,10 +16,10 @@ This guide explains how to retrieve traces, sessions, and observations from the 
 ElasticDash Logger exposes the Langfuse Public API, which provides:
 
 - **RESTful endpoints** for fetching traces, sessions, observations, and scores
-- **Python SDK** with type-safe wrappers
-- **JavaScript/TypeScript SDK** with type-safe wrappers
 
 All data is typically available for querying within **15-30 seconds** of ingestion.
+
+**Note:** Once traces are fetched, they are evaluated and shown on your dashboard. Use the dashboard to check your existing traces, test cases, and test runs.
 
 ---
 
